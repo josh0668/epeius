@@ -19,6 +19,6 @@ jobs:
     - name: Authenticate Wrangler
       env:
         CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
-      run: wrangler login --api-token $CF_API_TOKEN
+      run: wrangler login
     - name: Deploy to Cloudflare Workers
       run: wrangler publish
